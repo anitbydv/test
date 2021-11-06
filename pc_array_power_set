@@ -1,10 +1,12 @@
-function pc_array_power_set($array) {
-    // initialize by adding the empty set
-    $results = array(array( ));
+<?php
+    function pc_array_power_set($array) {
+        // initialize by adding the empty set
+        $results = array(array( ));
 
-    foreach ($array as $element)
-        foreach ($results as $combination)
-            array_push($results, array_merge(array($element), $combination));
+        foreach ($array as $element)
+            foreach ($results as $combination)
+                array_push($results, array_merge(array($element), $combination));
 
-    return $results;
-}
+        return $results;
+    }
+?>
